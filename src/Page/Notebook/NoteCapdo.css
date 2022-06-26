@@ -1,0 +1,233 @@
+ 
+/* cấp độ 1 */
+.container-app {
+height: calc(100%-55px);     
+}
+.NoteCapdo1_seach{
+     position:relative;
+     top: -700px;
+     left: 38%;
+     width: 24%;
+     height: 40px;
+     background: #F2F2F2;
+     border-radius: 36px;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     padding: 0 5px;
+}
+.NoteCapdo1_seach_imager{
+     width: 27px;
+     height: 27px;
+     margin-right: 10px;
+}
+.NoteCapdo1_input{
+     margin-left: 10px;
+     width: 100%;
+     border: none;
+     background: transparent;
+
+
+}
+.NoteCapdo1_input:focus{
+     outline: none;
+}
+.NoteCapdo1_input::placeholder{
+     font-family: 'Quicksand';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 22px;
+letter-spacing: 0.0128571em;
+
+color: #BDBDBD;
+}
+/* nodata */
+.NoteCapdo1_conter_nodata {
+     text-align: center;
+     position: relative;
+     top: -656px;
+     left: -10px;
+     background: #FFFFFF;
+     width: 45%;
+     margin: 0 auto;
+ }
+.NoteCapdo1_nodata_imager{
+     width: 230.38px;
+}
+.NoteCapdo1_nodata_text{
+     font-family: 'Quicksand';
+     font-style: normal;
+     font-weight: 700;
+     font-size: 16px;
+     line-height: 30px;
+     align-items: center;
+     text-align: center;
+     letter-spacing: 0.0128571em;
+}
+.NoteCapdo1_nodata_text p{
+     margin: -5px;
+}
+/* data */
+
+.Notebook_imgager_wrap{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border:2px solid #58CC02;
+  position: relative;
+}
+
+.NoteBook_1_imgager2{
+     position: absolute;
+     top: 2.5px;
+     left: 1.5px;
+     width: 12px;
+     display:none;
+     border: 1px solid black;
+}
+.NoteCapdo1_table{
+     width: 95%;
+}
+.activeCheck{
+     display:block;
+     background-image: url('../../imager/Vector\ 4.2.png');
+     background-repeat: no-repeat;
+     background-size:70% 70%;
+     background-position: center;
+}
+.search-block {
+     display: none;
+}
+.active-block  {
+     display: block
+}
+.hide-block {
+     display:none;
+}
+.backgound-shadow {
+    
+}
+
+.NoteCapdo1_conter_alert{
+     border-radius: 20px;
+     border: 1px solid black;
+     margin: auto;
+     width: 550px;
+     height: 250px;
+     position: relative;
+     top: -550px;
+     left: -10px;
+     background-color:white;
+     z-index: 232323;
+     position: relative;
+}
+.NoteCapdo1_conter_alert img {
+     width: 38%;
+     position: absolute;
+     top: -148px;
+     right: 50%;
+     transform: translateX(50%);
+}
+.NoteCapdo1_text {
+     margin: auto;
+     width: 82%;
+     padding-top: 66px;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     position: relative;
+
+ }
+ .NoteCapdo1_text p{
+     font-family: 'Quicksand';
+     font-size: 18px;
+     font-weight: 700;
+ }
+.notebook_modal_button1{
+     width: 220px;
+    height: 35px;
+     background: linear-gradient(83.47deg, #58CC02 9.02%, #23AC38 90.81%);
+     box-shadow: 0px 4px 0px #209B32;
+     border-radius: 100px;
+     position: relative;
+     top: 0;
+     left: 220px;
+     border: none;
+     font-size: 25px;
+     font-family: 'Quicksand';
+     font-weight: 700;
+     color: #FFFFFF;
+     transform: translateX(-50%);
+}
+.notebook_modal_button2{
+     width: 220px;
+     height: 35px;
+     border-radius: 100px;
+     border:none;
+     box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+     position: relative;
+     top: 10px;
+     left: 110px;
+     
+
+}
+.loading{
+     margin: auto;
+     width: 40%;
+     position: relative;
+     top: -747px;
+     left: -10px;
+     background-color:white;
+     z-index: 232323;
+}
+.searchNoInfo{
+     margin: auto;
+     width: 40%;
+     position: relative;
+     top: -676px;
+     left: -10px;
+     background-color:white;
+     z-index: 232323;
+}
+.main-block {
+     height: 100vh
+}
+.loader {
+     margin : auto;
+     border: 16px solid #f3f3f3;
+     border-radius: 50%;
+     border-top: 16px solid #3498db;
+     width: 50px;
+     height: 50px;
+     -webkit-animation: spin 2s linear infinite; /* Safari */
+     animation: spin 2s linear infinite;
+   }
+   
+   /* Safari */
+   @-webkit-keyframes spin {
+     0% { -webkit-transform: rotate(0deg); }
+     100% { -webkit-transform: rotate(360deg); }
+   }
+   
+   @keyframes spin {
+     0% { transform: rotate(0deg); }
+     100% { transform: rotate(360deg); }
+   }
+   .NoteCapdo1_conter_data {
+     width: 56%;
+     margin: 0 auto;
+     position: relative;
+     top: -674px;
+     box-sizing: border-box;
+     padding-left: 20px;
+     /* left: 30px; */
+     height: 70vh;
+     overflow-y: scroll;
+     background: #FFFFFF;
+ }
+
+ .NoteCapdo1_conter_data{
+
+ }

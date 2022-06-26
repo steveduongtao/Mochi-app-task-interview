@@ -1,0 +1,239 @@
+/* font-family: 'Lobster', cursive;
+font-family: 'Oswald', sans-serif;
+font-family: 'Quicksand', sans-serif; */
+ @font-face{
+      src:url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@300&family=Quicksand&display=swap" rel="stylesheet') ;
+      font-family: 'Quicksand', sans-serif; 
+ }
+
+.Header_{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      max-width: 1920px;
+      /* height: 68px; */
+      height: 55px;
+      padding: 0 58px 0 120px;
+      gap: 171px;
+      background: #F2F2F2;
+      box-shadow:-10px -10px 10px rgba(189, 189, 189, 0.2), 6px 6px 10px rgba(189, 189, 189, 0.2) ;
+      position: relative;
+      left: 3px;
+      right: -3px;
+      top: 1px;
+      padding: 2px ;
+}
+/* logo mochi */
+.header_logo{
+      width: 187.19px;
+      height: 32px;
+      margin-top: 3px;
+      margin-left: 35%;
+
+}
+/* conter */
+.header_conter{
+      display: flex;
+      position: absolute;
+      left: 25.05%;
+      right: 25.05%;
+      top: 0%;
+      bottom: 0%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px;
+      gap: 12px;
+}
+
+.header_review{
+      width: 24%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      gap: 12px;
+}
+.bieudo{
+      width: 39.6px;
+      /* height: 46px; */
+      height: 40px;
+      position: relative;
+      top: -10px
+}
+.bieudo_vector_{
+      /* width: 25.23px; */
+      height: 11.52px; 
+      position: absolute;
+      left: 12.5%;
+      right: 23.8%;
+      top: 8px;
+}
+
+.bieudo_cot1_right{
+      width: 4.8px;
+      height: 15.36px;      
+      background-color:#EA5757 ;
+      box-shadow: -2px 0  #B90202;
+      border-radius: 2px;
+      position: absolute;
+      left: 9%;
+      right: 81.86%;
+      bottom: 0;
+}
+
+.biedo_cot2_right{
+      width: 4.98px;
+      /* height: 19.31px; */
+      height: 18.31px;
+      position: absolute;
+      left: 34.82%;
+      right: 52.85%;
+      bottom: 0;
+      background: hsl(195, 85%, 64%);
+      box-shadow: -2px 0  #03AFD7;
+      border-radius: 1.5px;
+}
+.bieudo_cot3_right{
+      width: 4.93px;
+      /* height: 22.98px; */
+      height: 20.98px;
+      position: absolute;
+      left: 60.23%;
+      right: 27.32%;
+      bottom: 0;
+      background-color:  #2F7FEC;
+      box-shadow: -2px 0  #006ADC;
+      border-radius: 1.5px;
+}
+.bieudo_cot4_right{
+       width: 4.98px;
+      /* height: 26.82px; */
+      height: 24.82px;
+      position: absolute;
+      bottom:0; 
+      right: 0%;
+      background-color: #213782;
+      box-shadow: -2px 0 #182C66 ;
+      border-radius: 2px;
+}
+.bieudo_cot_text{
+      width: 50px;
+      height: 19px;
+      font-family: 'Quicksand';
+      font-style: normal;
+      font-weight: 500;
+       font-size: 13px;
+      line-height: 19px;
+      position: absolute;
+      bottom: 0;
+} 
+.header_vocabulary_{
+      width: 24%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      gap: 2px;   
+}
+.header_vocabulary{
+      /* width: 41.1px; */
+      width: 40.1px;
+      /* height: 36px; */
+}
+
+.vocabulary_text{
+      font-family: 'Quicksand';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 19px;
+}
+.header_notebook_{
+      width: 24%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      gap: 2px;
+}
+.header_notebook{
+      width: 26.81px;
+      /* width: 27.81px; */
+      /* height: 36px; */
+}
+.notebook_text{
+      width: 47px;
+      height: 19px;
+      font-family: 'Quicksand';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 19px;
+}
+.header_community_{
+      width: 24%;
+      height: 100%;
+       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      gap: 2px;
+}
+.header_community{
+      width: 45.88px;
+      /* width: 47.88px; */
+      /* height: 36px; */
+}
+.community_text{
+      width: 80px;
+      height: 19px;
+      font-family: 'Quicksand';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 19px;
+}
+/* avatar */
+.header_user_page{
+      position: absolute;
+      right: 5%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0px;
+      gap: 16px;
+
+}
+.user_page_username{
+      font-family: 'Quicksand';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      /* font-size: 24px; */
+      line-height: 30px;
+      color: #F8AD3E;
+}
+.user_page_imager_user{
+      width: 50px;
+      /* width: 56px; */
+      /* height: 56px; */
+      height: 50px;
+}
+.user_page_imager_down{
+      width: 15px;
+      height: 7px;
+}
+.header_review:hover, .header_vocabulary_:hover,
+ .header_notebook_:hover, .header_community_:hover{
+      background:#FFFFFF ;
+      z-index: 9999;
+      cursor: pointer;
+}

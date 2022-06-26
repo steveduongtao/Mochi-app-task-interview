@@ -1,0 +1,338 @@
+
+/* chưa có bài học */
+.notebook_{
+      max-width: 1920px;
+      display: flex;
+      max-height: 1080px;
+      position: relative;
+      margin-top: 5px;
+      
+  
+}
+/* left */
+.notebook_left{
+      width: 25%;
+      max-height: 1080px;
+      background:#DADADA;
+}
+.notebook_mochiver3_imager{
+      width: 11%;
+      position: absolute;
+      left: 75px;
+      top: 85%;
+}
+/* center */
+.notebook_center{
+      width: 50%;
+      height: 670px;
+      background: #FFFFFF;
+}
+.notebook_mochinotebook_imager{
+      /* width: 17%; */
+      width: auto;
+      height: 34%;
+      position: absolute;
+      top: 18%;
+      left: 43%;
+}
+.notebook_center_text1{
+      width: 37%;
+      height: 8%;
+      position: absolute;
+      top: 55%;
+      left: 32%;
+      font-family: 'Quicksand';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 35px;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.0128571em;
+}
+.notebook_center_text1 p{
+      margin-top:-10px
+}
+.notebook_center_button{
+      width: 13%;
+      height: 6%;
+      background: linear-gradient(83.47deg, #58CC02 9.02%, #23AC38 90.81%);
+      box-shadow: 0px 4px 0px #209B32;
+      border-radius: 100px;
+      font-family: 'Quicksand';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 30px;
+      border: none;
+      color: #ffffff;
+      position: absolute;
+      top: 70%;
+      left: 43%;
+}
+/* right */
+.notebook_right{
+      width: 24%;
+      max-height: 1080px;
+      background: #DADADA;
+}
+
+.notebook_right_alarm{
+      width: 11%;
+      height: 4%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      gap: 8px;
+      position: absolute;
+      left:81%;
+      top: 55%;
+      color: #F8AD3E;
+      font-size: 12px;
+      background: #FFFFFF;
+      padding: 5px;
+      border-radius: 13px;
+}
+.notebook_alarm_imager{
+      height: 25px;
+}
+
+/* đã có bài học */
+
+.notebook_1{
+      max-width: 1920px;
+      display: flex;
+      /* max-height: 1080px; */
+      position: relative;
+      padding: 0 10px;
+      box-sizing: border-box;
+}
+/* left */
+.notebook_1_left{
+      width: 22%;
+      max-height: 1080px;
+      background:#DADADA;
+}
+
+/* center */
+.notebook_1_center{
+      width: 56%;
+      min-height: 800px;
+      background: #FFFFFF;
+      padding: 0 25px;
+
+}
+.notebook_1_button_grup{
+      padding-top: 20px;
+      display: flex;
+}
+.notebook_1_button_grup button{
+      border: none;
+      background: transparent;
+      font-family: 'Quicksand';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.0128571em;
+      padding: 5px 0 0 0;
+}
+.notebook_1_capdo_1{
+      width: 20%;
+      height: 20px;
+}
+.capdo1_bottom{
+      height: 5px;
+      background: #EB5757;
+
+}
+.notebook_1_capdo_2{
+      width: 19.5%;
+}
+.capdo2_bottom{
+      height: 5px;
+      background:
+      #FFCB08 ;
+
+}
+.notebook_1_capdo_3{
+      width: 20%;
+}
+.capdo3_bottom{
+      height: 5px;
+      background:#56CCF2 ;
+
+}
+.notebook_1_capdo_4{
+      width: 19.5%;
+}
+.capdo4_bottom{
+      height: 5px;
+      background: #2F80ED;
+
+}
+.notebook_1_capdo_5{
+      width: 20%;
+}
+.capdo5_bottom{
+      height: 5px;
+      background: #213782;
+
+}
+.capdo1_vector, .capdo2_vector, .capdo3_vector, .capdo4_vector, .capdo5_vector{
+      margin-top: -5px;
+      opacity: 0;
+}
+
+/* right */
+.notebook_1_right{
+      width: 22%;
+      max-height: 1080px;
+      background: #DADADA;
+}
+
+
+
+
+
+.capdo1_vector.hidden{
+      visibility: hidden;
+}
+
+
+
+.active .capdo1_vector{
+      opacity: 1;
+}
+.active .capdo1_bottom{
+      height: 10px;
+      border-radius: 3px;
+      margin: -2px 1px;
+}
+.active .capdo2_vector{
+      opacity: 1;
+}
+.active .capdo2_bottom{
+      height: 10px;
+      border-radius: 3px;
+      margin: -2px 1px;
+}
+.active .capdo3_vector{
+      opacity: 1;
+}
+.active .capdo3_bottom{
+      height: 10px;
+      border-radius: 3px;
+      margin: -2px 1px;
+}
+.active .capdo4_vector{
+      opacity: 1;
+}
+.active .capdo4_bottom{
+      height: 10px;
+      border-radius: 3px;
+      margin: -2px 1px;
+}
+.active .capdo5_vector{
+      opacity: 1;
+}
+.active .capdo5_bottom{
+      height: 10px;
+      border-radius: 3px;
+      margin: -2px 1px;
+}
+
+
+/* modal */
+.notebook_modal{
+      width: 600px;
+      height: 320px;
+      background-color: #FFFFFF;
+      border-radius: 20px;
+      position: absolute;
+      top: 330px;
+      left: 30%;
+      border: 1px solid black;
+}
+.notebook_modal p{
+      font-family:"Quicksand" ;
+      font-weight:700;
+      font-size: 23px;
+      line-height:35px;
+      letter-spacing: 1.29%;
+      align-items:center;
+      position: relative;
+      top: -150px;
+}
+.notebook_modal_img1{
+      width: 250px;
+      position: relative;
+      top: -155px;
+}
+.notebook_modal_bodyclose{
+      position: relative;
+      top: -240px;
+      right: -550px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #FFFFFF;
+      box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+      background-image: url('./../../imager/closebutton.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+}
+
+.notebook_modal_button_update{
+      width: 266px;
+      height: 52px  ;
+      background: linear-gradient(83.47deg, #58CC02 9.02%, #23AC38 90.81%);
+      box-shadow: 0px 4px 0px #209B32;
+      border-radius: 100px;
+      position: relative;
+      top: -160px;
+      left: 150px;
+      border: none;
+      font-size: 25px;
+      font-family: 'Quicksand';
+      font-weight: 700;
+      color: #FFFFFF;
+}
+.notebook_modal_button_no{
+      width: 266px;
+      height: 52px;
+      border: 1px solid #F8F8F8;
+      box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 100px;
+      position: relative;
+      top: -90px;
+      left: -115px;
+      font-size: 25px;
+      font-family: 'Quicksand';
+      font-weight: 700;
+}
+.background_shadow{
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      position:fixed;
+      top: 0;
+      bottom: 0;
+      display: none;
+}
+@media screen and (max-width: 1026px) {
+    
+  }
+  .loader {
+      margin : auto;
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #3498db;
+      width: 50px;
+      height: 50px;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+    }
