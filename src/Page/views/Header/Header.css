@@ -1,17 +1,13 @@
-/* font-family: 'Lobster', cursive;
-font-family: 'Oswald', sans-serif;
-font-family: 'Quicksand', sans-serif; */
+
  @font-face{
       src:url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@300&family=Quicksand&display=swap" rel="stylesheet') ;
       font-family: 'Quicksand', sans-serif; 
  }
-
 .Header_{
       display: flex;
       flex-direction: row;
       align-items: center;
       max-width: 1920px;
-      /* height: 68px; */
       height: 55px;
       padding: 0 58px 0 120px;
       gap: 171px;
@@ -29,7 +25,6 @@ font-family: 'Quicksand', sans-serif; */
       height: 32px;
       margin-top: 3px;
       margin-left: 35%;
-
 }
 /* conter */
 .header_conter{
@@ -45,7 +40,6 @@ font-family: 'Quicksand', sans-serif; */
       padding: 0px;
       gap: 12px;
 }
-
 .header_review{
       width: 24%;
       height: 100%;

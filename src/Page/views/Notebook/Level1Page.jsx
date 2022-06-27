@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
-import './NoteCapdo.css'
+import './Level.css'
 import Notebook from './Notebook'
 // imager
-import Seach from '../../imager/search--v2 2.png'
-import Ellipse from '../../imager/Ellipse 9.png'
-import vector42 from '../../imager/Vector 4.2.png'
-import mochiNotebook from '../../imager/Mochi notebook.png'
-import mochihuongdan from '../../imager/mochihuongdan.png'
+import Seach from '../../assets/images/search--v2 2.png'
+import Ellipse from '../../assets/images/Ellipse 9.png'
+import vector42 from '../../assets/images/Vector 4.2.png'
+import mochiNotebook from '../../assets/images/Mochi notebook.png'
+import mochihuongdan from '../../assets/images/mochihuongdan.png'
 
 
 let arrayRememberStatus = []
 let arrayDataAllLevel = []
 let arrayDataLevelCurrent = []
 let valueInput = ''
-let id=1;
-function NoteCapdo2() {
+let id = 1;
+function NoteCapdo1() {
   const navigate = useNavigate();
   const [active, setActive] = useState()
 
@@ -43,11 +43,11 @@ function NoteCapdo2() {
         console.log(35, arrayDataAllLevel)
 
         if (test1.data.code === 1) {
-          test1.data.data[2] = test1.data.data[2].filter((val) => {
+          test1.data.data[1] = test1.data.data[1].filter((val) => {
             return val.review_status == 1;
           })
-          arrayDataLevelCurrent = test1.data.data[2]
-          setNoteData1(test1.data.data[2])
+          arrayDataLevelCurrent = test1.data.data[1]
+          setNoteData1(test1.data.data[1])
         } else {
           setNoteData1([])
         }
@@ -96,7 +96,7 @@ function NoteCapdo2() {
   //   console.log(84,valueInput)
   // })
   function handleValueInput(e) {
-    
+
     valueInput = e.target.value
     if (valueInput == '') {
       setNoteData1(arrayDataLevelCurrent)
@@ -109,8 +109,11 @@ function NoteCapdo2() {
 
     // v3.1/words/dictionary-english?key={key}
     async function search() {
-      document.querySelector('.search-block').classList.add('active-block')
       document.querySelector('.main-block').classList.add('hide-block')
+      document.querySelector('.loading').classList.remove('hide-block')
+      document.querySelector('.loading').classList.add('active-block')
+      // document.querySelector('.searchNoInfo').classList.remove('active-block')
+      // document.querySelector('.searchNoInfo').classList.add('hide-block')
       try {
         let test1 = await axios.get(`https://mochien-test.akira.edu.vn/v3.1/words/dictionary-english?key=${valueInput}?user_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjo0MzQ2NywidG9rZW4iOiI2MmIzZTU2Yzc3MjAzIiwiaXAiOiI1OC4xODcuMTU0LjIwNiJ9.p9OqGFM2_aHcb7E0a4HupzA_WI7ZHNmqD1dJUZ6EMp0&offset=20`, {
           headers: {
@@ -119,6 +122,10 @@ function NoteCapdo2() {
             AppVersion: 1.0,
           }
         })
+        document.querySelector('.loading').classList.remove('active-block')
+        document.querySelector('.loading').classList.add('hide-block')
+        document.querySelector('.search-block').classList.add('active-block')
+        document.querySelector('.main-block').classList.add('hide-block')
         let suggest = test1.data.data.suggests
         console.log(102, test1.data.data.suggests)
         // let dataVisualSearch
@@ -174,31 +181,31 @@ function NoteCapdo2() {
 
   // }
   // console.log(count)
-  function popUpConfirmChangeWordList (i){
+  function popUpConfirmChangeWordList(i) {
     // document.querySelector('.searchNoInfo').classList.add('hide-block')
     document.querySelector('.NoteCapdo1_conter_alert').classList.remove('hide-block')
     document.querySelector('.NoteCapdo1_conter_alert').classList.add('active-block')
     document.querySelector('.main-block').classList.add('hide-block')
-    id =i;
+    id = i;
     console.log(id)
   }
-  function cancelClick(){
+  function cancelClick() {
     // document.querySelector('.NoteCapdo1_conter_alert').classList.remove('active-block')
     // document.querySelector('.NoteCapdo1_conter_alert').classList.add('hide-block')
     // document.querySelector('.main-block').classList.remove('hide-block')
     navigate(`/Page/Notebook/NoteCapdo${id}`)
   }
-  function acceptChange(){
-    console.log(189,id)
+  function acceptChange() {
+    console.log(189, id)
+    //hàm thay đổi status d
     for(let i =0 ; i<arrayRememberStatus.length;i++){
       postStatusWord(arrayRememberStatus[i],0)
     }
-    if (id == 2) {
+    if (id == 1) {
       window.location.reload()
     } else {
       navigate(`/Page/Notebook/NoteCapdo${id}`)
     }
-
   }
   return (
     <div className='container-app'>
@@ -206,17 +213,27 @@ function NoteCapdo2() {
       <div className="NoteCapdo1_seach">
         <input id='myInput' type="text" className='NoteCapdo1_input' placeholder='Gõ vào đây từ bạn muốn tìm' onChange={(e) => { handleValueInput(e) }} />
         <img id='myBtn' onClick={() => { searchWord() }} src={Seach} alt="img" className='NoteCapdo1_seach_imager' />
-     </div>
-     <div className='backgound-shadow'>
+      </div>
+{/* ------------------------------------ */}
+      <div className='backgound-shadow'>
         <div className='NoteCapdo1_conter_alert hide-block'>
-        <img src={mochiNotebook} alt="img" className='NoteCapdo1_nodata_imager' />
+        <img src={mochihuongdan} alt="img" className='NoteCapdo1_nodata_imager' />
         <div className='NoteCapdo1_text'>
           <p>bạn có muốn lưu lại list từ vựng đã thay đổi không ?</p>
           <button className='notebook_modal_button1' onClick={() => { cancelClick() }} >Cancel</button>
           <button className='notebook_modal_button2' onClick={() => { acceptChange() }}>OK</button>
         </div>
       </div>
-            </div>
+      </div>
+      
+
+      <div className='loading hide-block'>
+        <img src={mochiNotebook} alt="img" className='NoteCapdo1_nodata_imager' />
+        <div className='NoteCapdo1_nodata_text'>
+          <h1>Loading................</h1>
+          <div className='loader'></div>
+        </div>
+      </div>
       <div className='main-block'>
         {NoteData1.length > 0 ?
           (
@@ -245,7 +262,7 @@ function NoteCapdo2() {
             </div>
           ) : (
             <div className='NoteCapdo1_conter_nodata'>
-              <img src={mochihuongdan} alt="img" className='NoteCapdo1_nodata_imager' />
+              <img src={mochiNotebook} alt="img" className='NoteCapdo1_nodata_imager' />
               <div className='NoteCapdo1_nodata_text'>
                 <span>Loading...........</span>
                 <div class="loader"></div>
@@ -253,6 +270,13 @@ function NoteCapdo2() {
             </div>
           )}
       </div>
+      {/* <div className='NoteCapdo1_conter_nodata'>
+              <img src={mochiNotebook} alt="img" className='NoteCapdo1_nodata_imager' />
+              <div className='NoteCapdo1_nodata_text'>
+                <span>Ú, không có từ vựng nào của bạn </span>
+                <p>đang ở cấp độ này bạn ơi.</p>
+              </div>
+            </div> */}
 
 
 
@@ -283,15 +307,15 @@ function NoteCapdo2() {
               </table>
             </div>
           ) : (
-            <div className='NoteCapdo1_conter_nodata'>
+            <div className='searchNoInfo'>
               <img src={mochiNotebook} alt="img" className='NoteCapdo1_nodata_imager' />
               <div className='NoteCapdo1_nodata_text'>
-                <span>Ú, Không tìm thấy từ <span style={{fontSize: "24px"}}>{valueInput}</span> nào cả ! hu hu !!! </span>
+                <span>Ú, Không tìm thấy từ <span style={{ fontSize: "24px" }}>{valueInput}</span> nào cả ! hu hu !!! </span>
                 <p>Bạn search lại nhé !@@</p>
               </div>
             </div>
           )}
-          
+
       </div>
 
 
@@ -299,4 +323,4 @@ function NoteCapdo2() {
   )
 }
 
-export default NoteCapdo2
+export default NoteCapdo1

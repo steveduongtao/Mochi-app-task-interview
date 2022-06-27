@@ -1,13 +1,13 @@
 import React from 'react'
 import './Header.css'
 // imager
-import header_logo from '../imager/Logo_orange 2.png'
-import header_nootebook from '../imager/notebook.png'
-import header_vocabulary from '../imager/vocabulary.png'
-import header_community from '../imager/community.png'
-import header_vector from '../imager/Vector.png'
-import userLogined from '../imager/userLogined.png'
-import down from '../imager/Down.png'
+import header_logo from '../../assets/images/Logo_orange 2.png'
+import header_nootebook from '../../assets/images/notebook.png'
+import header_vocabulary from '../../assets/images/vocabulary.png'
+import header_community from '../../assets/images/community.png'
+import header_vector from '../../assets/images/Vector.png'
+import userLogined from '../../assets/images/userLogined.png'
+import down from '../../assets/images/Down.png'
 import { useNavigate, useParams } from 'react-router-dom'
 
 
@@ -73,7 +73,7 @@ function Header() {
            
       </div>     
          <div className="header_user_page">
-            <span className='user_page_username'>Trịnh Quỳnh...</span>
+            <span className='user_page_username'>Dương Thế Tạo</span>
             <img src={userLogined} alt='img' className='user_page_imager_user' />
             <img src={down} alt='img' className='user_page_imager_down' />
            </div> 

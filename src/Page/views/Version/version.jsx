@@ -1,6 +1,6 @@
 import React from 'react'
-import './Community.css'
-import mochiver3 from '../../imager/MochiMochi ver3.png'
+import './version.css'
+import mochiver3 from '../../assets/images/MochiMochi ver3.png'
 
 function Community() {
   return (

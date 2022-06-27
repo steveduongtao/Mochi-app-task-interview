@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
-import './NoteCapdo.css'
+import './Level.css'
 import Notebook from './Notebook'
 // imager
-import Seach from '../../imager/search--v2 2.png'
-import Ellipse from '../../imager/Ellipse 9.png'
-import vector42 from '../../imager/Vector 4.2.png'
-import mochiNotebook from '../../imager/Mochi notebook.png'
-import mochihuongdan from '../../imager/mochihuongdan.png'
+import Seach from '../../assets/images/search--v2 2.png'
+import Ellipse from '../../assets/images/Ellipse 9.png'
+import vector42 from '../../assets/images/Vector 4.2.png'
+import mochiNotebook from '../../assets/images/Mochi notebook.png'
+import mochihuongdan from '../../assets/images/mochihuongdan.png'
 
 
 let arrayRememberStatus = []

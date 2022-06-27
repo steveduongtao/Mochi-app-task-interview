@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate, useParams } from 'react-router-dom'
-import './NoteCapdo.css'
+import './Level.css'
 import Notebook from './Notebook'
 // imager
-import Seach from '../../imager/search--v2 2.png'
-import Ellipse from '../../imager/Ellipse 9.png'
-import vector42 from '../../imager/Vector 4.2.png'
-import mochiNotebook from '../../imager/Mochi notebook.png'
-import mochihuongdan from '../../imager/mochihuongdan.png'
+import Seach from '../../assets/images/search--v2 2.png'
+import Ellipse from '../../assets/images/Ellipse 9.png'
+import vector42 from '../../assets/images/Vector 4.2.png'
+import mochiNotebook from '../../assets/images/Mochi notebook.png'
+import mochihuongdan from '../../assets/images/mochihuongdan.png'
 
 
 let arrayRememberStatus = []
@@ -16,7 +16,7 @@ let arrayDataAllLevel = []
 let arrayDataLevelCurrent = []
 let valueInput = ''
 let id=1;
-function NoteCapdo5() {
+function NoteCapdo3() {
   const navigate = useNavigate();
   const [active, setActive] = useState()
 
@@ -43,11 +43,11 @@ function NoteCapdo5() {
         console.log(35, arrayDataAllLevel)
 
         if (test1.data.code === 1) {
-          test1.data.data[5] = test1.data.data[5].filter((val) => {
+          test1.data.data[3] = test1.data.data[3].filter((val) => {
             return val.review_status == 1;
           })
-          arrayDataLevelCurrent = test1.data.data[5]
-          setNoteData1(test1.data.data[5])
+          arrayDataLevelCurrent = test1.data.data[3]
+          setNoteData1(test1.data.data[3])
         } else {
           setNoteData1([])
         }
@@ -175,7 +175,6 @@ function NoteCapdo5() {
   // }
   // console.log(count)
   function popUpConfirmChangeWordList (i){
-
     // document.querySelector('.searchNoInfo').classList.add('hide-block')
     document.querySelector('.NoteCapdo1_conter_alert').classList.remove('hide-block')
     document.querySelector('.NoteCapdo1_conter_alert').classList.add('active-block')
@@ -194,7 +193,7 @@ function NoteCapdo5() {
       postStatusWord(arrayRememberStatus[i],0)
     }
     console.log(189,id)
-    if (id == 5) {
+    if (id == 3) {
       window.location.reload()
     } else {
       navigate(`/Page/Notebook/NoteCapdo${id}`)
@@ -300,4 +299,4 @@ function NoteCapdo5() {
   )
 }
 
-export default NoteCapdo5
+export default NoteCapdo3
